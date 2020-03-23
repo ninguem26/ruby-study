@@ -1,4 +1,6 @@
 class User
+    attr_reader :name, :age, :country
+
     def initialize(name, age, country)
       @name = name
       @age = age

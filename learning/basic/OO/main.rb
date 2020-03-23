@@ -1,4 +1,9 @@
 require './user'
+require './user_list'
 
-user = User.new("Júlio", 23, "Brazil")
-puts user.to_s
+list = UserList.new
+list.append(User.new("Júlio", 23, "Brazil"))
+list.append(User.new("Júlia", 20, "Brazil"))
+list.append(User.new("John", 42, "USA"))
+
+puts list.filter {|user| user.name.include?("Júli")}
